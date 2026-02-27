@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="col-span-3">
             <p className="font-medium mb-4 uppercase">Menu</p>
             <ul className="space-y-2">
-              <li>About</li>
-              <li>Rooms</li>
-              <li>FAQ</li>
+              <li>Our Story</li>
+              <li>Villa Types</li>
+              <li>Services</li>
               <li>Contact Us</li>
             </ul>
           </div>

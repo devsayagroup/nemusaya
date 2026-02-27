@@ -8,7 +8,7 @@ import Footer from "@/components/layout/footer";
 import WhatsappButton from "@/components/ui/WhatsappButton";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 // import FirstVisitModal from "@/components/ui/FirstVisitModal";
-
+import UnderDevelopment from "@/components/pages/under-development";
 const textFont = Raleway({
   variable: "--font-text",
   subsets: ["latin"],
@@ -40,11 +40,11 @@ export default function LayoutClient({
         <Loading />
       ) : (
         <>
-          <Header />
-          {/* <FirstVisitModal/> */}
+          {/* <Header />
           <WhatsappButton />
           <SmoothScroll>{children}</SmoothScroll>
-          <Footer />
+          <Footer /> */}
+          <UnderDevelopment/>
         </>
       )}
     </div>
