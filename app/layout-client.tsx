@@ -40,11 +40,11 @@ export default function LayoutClient({
         <Loading />
       ) : (
         <>
-          {/* <Header />
+          <Header />
           <WhatsappButton />
           <SmoothScroll>{children}</SmoothScroll>
-          <Footer /> */}
-          <UnderDevelopment/>
+          <Footer />
+          {/* <UnderDevelopment/> */}
         </>
       )}
     </div>
