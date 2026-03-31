@@ -83,7 +83,7 @@ export default function HeroSection() {
               className="w-[140px] md:w-[170px] aspect-square overflow-hidden"
             >
               <Image
-                src="/villa1.jpg"
+                src="/villa8.webp"
                 alt="NemuSaya detail"
                 width={400}
                 height={400}
@@ -153,7 +153,7 @@ export default function HeroSection() {
               {/* Keep it tall like the reference */}
               <div className="relative w-full h-[520px] md:h-[620px]">
                 <Image
-                  src="/villa1.jpg"
+                  src="/villa-3.webp"
                   alt="NemuSaya Villa"
                   fill
                   className="object-cover"

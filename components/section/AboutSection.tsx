@@ -41,7 +41,7 @@ export default function AboutSection() {
             className="col-span-12 md:col-span-4 "
           >
             <Image
-              src="/villa1.jpg"
+              src="/villa-1.webp"
               alt="Villa exterior detail"
               width={600}
               height={850}
@@ -100,7 +100,7 @@ export default function AboutSection() {
             className="col-span-12 md:col-span-3 mt-8"
           >
             <Image
-              src="/villa1.jpg"
+              src="/villa5.webp"
               alt="Material and light detail"
               width={600}
               height={400}
