@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="bg-neutral-50">
-      <div className="mx-auto max-w-[1440px] px-4 py-32">
+    <section className="bg-neutral-50" id="story">
+      <div className="hidden md:block mx-auto max-w-[1440px] px-4 py-32">
         <div className="grid grid-cols-12 gap-8 mb-32">
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
@@ -84,7 +84,7 @@ export default function AboutSection() {
             className="col-span-12 md:col-span-6 md:col-start-7 mt-8"
           >
             <Image
-              src="/villa1.jpg"
+              src="/villa-3.webp"
               alt="Villa interior with garden view"
               width={900}
               height={600}
@@ -123,237 +123,126 @@ export default function AboutSection() {
           </motion.div>
         </div>
       </div>
+
+      {/* ======================================================================
+          MOBILE VIEW
+          Restructured into a beautiful vertical editorial flow.
+      ====================================================================== */}
+      <div className="md:hidden px-6 py-24 flex flex-col gap-12">
+        
+        {/* Mobile Heading 1 */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.6 }}
+          className="text-[42px] font-light leading-[1.1] text-neutral-900"
+        >
+          A <span className="font-style italic">Place</span> to
+          <br />
+          Slow down
+        </motion.h2>
+
+        {/* Tall Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative w-full h-[450px]"
+        >
+          <Image
+            src="/villa-1.webp"
+            alt="Villa exterior detail"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+
+        {/* Text 1 */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.6 }}
+          className="text-lg leading-relaxed text-neutral-700"
+        >
+          NemuSaya Villa is a modern private residence designed to slow the
+          pace of living.
+        </motion.p>
+
+        {/* Mobile Heading 2 */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.6 }}
+          className="text-[38px] font-light leading-[1.1] text-neutral-900 pt-4"
+        >
+          where <span className="font-style italic">Architecture</span> 
+          <br />
+          meets <span className="font-style italic">Nature</span>
+        </motion.h2>
+
+        {/* Text 2 */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.6 }}
+          className="text-lg leading-relaxed text-neutral-700"
+        >
+          Surrounded by trees and crafted with honest materials, the villa
+          offers a quiet balance between contemporary architecture and
+          nature.
+        </motion.p>
+
+        {/* Wide Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative w-full h-[300px]"
+        >
+          <Image
+            src="/villa-3.webp"
+            alt="Villa interior with garden view"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+
+        {/* Text 3 */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.6 }}
+          className="text-lg leading-relaxed text-neutral-700"
+        >
+          Located on Sunset Road, Bali, each space is shaped by light,
+          proportion, and silence. Creating a place that feels both refined
+          and deeply personal.
+        </motion.p>
+
+        {/* Detail Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative w-full aspect-[4/3] mt-4"
+        >
+          <Image
+            src="/villa5.webp"
+            alt="Material and light detail"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+
+      </div>
     </section>
   );
 }
-
-
-
-// "use client";
-
-// import Image from "next/image";
-// import { motion } from "framer-motion";
-
-// export default function AboutSection() {
-//   return (
-//     <section className="bg-neutral-50">
-//       <div className="mx-auto max-w-[1440px] px-4 py-32">
-//         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between mb-32">
-//           <motion.h2
-//             initial={{ opacity: 0, y: 24 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ delay: 0.1, duration: 0.6 }}
-//             className="
-//               text-[40px] md:text-[56px] font-light leading-tight text-neutral-900
-//               md:basis-[41.6667%] md:ml-[8.3333%]
-//             "
-//           >
-//             A <span className="font-style italic">Place</span> to
-//             <br />
-//             Slow down
-//           </motion.h2>
-
-//           <motion.h2
-//             initial={{ opacity: 0, y: 24 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ delay: 0.3, duration: 0.2 }}
-//             className="
-//               text-[40px] md:text-[56px] font-light leading-tight text-neutral-900 text-right
-//               md:basis-[41.6667%]
-//             "
-//           >
-//             where <span className="font-style italic">Architecture</span>
-//             <br />
-//             meets <span className="font-style italic">Nature</span>
-//           </motion.h2>
-//         </div>
-
-//         <div className="flex flex-col md:flex-row gap-12 mt-24">
-//           <div className="w-full lg:w-3/10 ">
-//             <Image
-//               src="/villa1.jpg"
-//               alt="Villa exterior detail"
-//               width={600}
-//               height={850}
-//               className="object-cover"
-//             />
-//           </div>
-
-//           <div className="hidden lg:block w-1/3 sticky top-12 self-start">
-//             <div className="w-full text-neutral-700 md:self-start">
-//               <p className="leading-relaxed">
-//                 NemuSaya Villa is a modern private residence designed to slow the
-//                 pace of living.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="flex flex-col md:flex-row justify-end gap-12 mt-24">
-//           <div className="hidden lg:block w-1/3 sticky top-12 self-start">
-//             <div className="w-full text-neutral-700 md:self-start">
-//               <p className="leading-relaxed text-right">
-//                 Surrounded by trees and crafted with honest materials, the villa
-//                 offers a quiet balance between contemporary architecture and
-//                 nature.
-//               </p>
-//             </div>
-//           </div>
-//           <div className="w-full lg:w-5/10 ">
-//             <Image
-//               src="/villa1.jpg"
-//               alt="Villa exterior detail"
-//               width={900}
-//               height={600}
-//               className="object-cover"
-//             />
-//           </div>
-//         </div>
-
-//         <div className="flex flex-col md:flex-row gap-12 mt-24">
-//           <div className="w-full lg:w-2/10 ">
-//             <Image
-//               src="/villa1.jpg"
-//               alt="Villa exterior detail"
-//               width={600}
-//               height={400}
-//               className="object-cover"
-//             />
-//           </div>
-
-//           <div className="hidden lg:block w-2/4 sticky top-12 self-start">
-//             <div className="w-full text-neutral-700 md:self-start">
-//               <p className="leading-relaxed">
-//                 Located on Sunset Road, Bali, each space is shaped by light,
-//                 proportion, and silence. Creating a place that feels both refined
-//                 and deeply personal.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
-// "use client";
-
-// import Image from "next/image";
-// import { motion } from "framer-motion";
-
-// export default function AboutSection() {
-//   return (
-//     <section className="bg-neutral-50">
-//       <div className="mx-auto max-w-[1440px] px-4 py-32">
-//         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between mb-32">
-//           <motion.h2
-//             initial={{ opacity: 0, y: 24 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ delay: 0.1, duration: 0.6 }}
-//             className="
-//               text-[40px] md:text-[56px] font-light leading-tight text-neutral-900
-//               md:basis-[41.6667%] md:ml-[8.3333%]
-//             "
-//           >
-//             A <span className="font-style italic">Place</span> to
-//             <br />
-//             Slow down
-//           </motion.h2>
-
-//           <motion.h2
-//             initial={{ opacity: 0, y: 24 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ delay: 0.3, duration: 0.2 }}
-//             className="
-//               text-[40px] md:text-[56px] font-light leading-tight text-neutral-900 text-right
-//               md:basis-[41.6667%]
-//             "
-//           >
-//             where <span className="font-style italic">Architecture</span>
-//             <br />
-//             meets <span className="font-style italic">Nature</span>
-//           </motion.h2>
-//         </div>
-
-//         {/* ROW 1 (image 850) */}
-//         <div className="flex flex-col lg:flex-row gap-12 mt-24 lg:items-stretch lg:min-h-[400px]">
-//           {/* Image sticky */}
-//           <div className="w-full lg:w-3/10">
-//             <div className="sticky top-12 self-start">
-//               <Image
-//                 src="/villa1.jpg"
-//                 alt="Villa exterior detail"
-//                 width={600}
-//                 height={850}
-//                 className="object-cover"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Text bottom aligned within 850px row height */}
-//           <div className="w-full lg:w-1/3 flex flex-col ">
-//             <p className="leading-relaxed text-neutral-700 ">
-//               NemuSaya Villa is a modern private residence designed to slow the
-//               pace of living.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* ROW 2 (image 600) */}
-//         <div className="flex flex-col lg:flex-row justify-end gap-12 mt-12 lg:items-stretch lg:min-h-[600px]">
-//           {/* Text bottom aligned within 600px row height */}
-//           <div className="w-full lg:w-1/3 flex flex-col ">
-//             <p className="leading-relaxed text-neutral-700 text-right">
-//               Surrounded by trees and crafted with honest materials, the villa
-//               offers a quiet balance between contemporary architecture and
-//               nature.
-//             </p>
-//           </div>
-
-//           {/* Image sticky */}
-//           <div className="w-full lg:w-5/10">
-//             <div className="sticky top-12 self-start">
-//               <Image
-//                 src="/villa1.jpg"
-//                 alt="Villa interior with garden view"
-//                 width={900}
-//                 height={600}
-//                 className="object-cover"
-//               />
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* ROW 3 (image 400) */}
-//         <div className="flex flex-col lg:flex-row gap-12 mt-12 lg:items-stretch lg:min-h-[300px]">
-//           {/* Image sticky */}
-//           <div className="w-full lg:w-2/10">
-//             <div className="sticky top-12 self-start">
-//               <Image
-//                 src="/villa1.jpg"
-//                 alt="Material and light detail"
-//                 width={600}
-//                 height={400}
-//                 className="object-cover"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Text bottom aligned within 400px row height */}
-//           <div className="w-full lg:w-2/4 flex flex-col justify-end">
-//             <p className="leading-relaxed text-neutral-700">
-//               Located on Sunset Road, Bali, each space is shaped by light,
-//               proportion, and silence. Creating a place that feels both refined
-//               and deeply personal.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
