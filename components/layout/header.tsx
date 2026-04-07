@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { customEase } from "@/lib/constants";
 
 const NAV = [
   { label: "Our Story", href: "/#story" },
@@ -13,13 +14,11 @@ const NAV = [
   { label: "Contact", href: "/#contact" },
 ];
 
-const customEase = [0.16, 1, 0.3, 1] as const;
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Prevent scrolling when the mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -31,9 +30,7 @@ export default function Header() {
     };
   }, [isMenuOpen]);
 
-  // Smooth Scroll Handler
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // If the link is an anchor and we are currently on the home page
     if (href.startsWith("/#") && pathname === "/") {
       e.preventDefault(); // Stop standard jump
       const targetId = href.replace("/#", "");
@@ -43,7 +40,6 @@ export default function Header() {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-    // Always close the mobile menu on click
     setIsMenuOpen(false);
   };
 
@@ -58,7 +54,6 @@ export default function Header() {
         <div className="mx-auto max-w-[1440px] px-4 py-8">
           <div className="flex items-center justify-between">
             
-            {/* Brand */}
             <Link href="/" className="relative z-10 flex items-center">
               <div className="relative w-[120px] md:w-[160px] lg:w-[180px] h-[40px] md:h-[30px]">
                 <Image 
@@ -71,7 +66,6 @@ export default function Header() {
               </div>
             </Link>
 
-            {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-10 lg:gap-14">
               {NAV.map((item, i) => (
                 <motion.div
