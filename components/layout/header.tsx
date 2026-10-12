@@ -14,7 +14,6 @@ const NAV = [
   { label: "Contact", href: "/#contact" },
 ];
 
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();

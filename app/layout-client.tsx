@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Tenor_Sans, Poppins, Raleway } from "next/font/google";
+import { Tenor_Sans, Raleway } from "next/font/google";
 import Loading from "./loading";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import WhatsappButton from "@/components/ui/WhatsappButton";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 // import FirstVisitModal from "@/components/ui/FirstVisitModal";
-import UnderDevelopment from "@/components/pages/under-development";
+
 const textFont = Raleway({
   variable: "--font-text",
   subsets: ["latin"],
@@ -44,7 +44,6 @@ export default function LayoutClient({
           <WhatsappButton />
           <SmoothScroll>{children}</SmoothScroll>
           <Footer />
-          {/* <UnderDevelopment/> */}
         </>
       )}
     </div>
